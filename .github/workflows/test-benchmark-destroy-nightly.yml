@@ -1,8 +1,7 @@
 name: 'Test: Benchmark Destroy Env'
 
+# Disable inherited upstream Azure cleanup schedule in this fork; manual dispatch stays available.
 on:
-  schedule:
-    - cron: '0 5 * * *'
   workflow_dispatch:
 
 permissions:
