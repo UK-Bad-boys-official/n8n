@@ -19,9 +19,8 @@ env:
   # script derives the images to check from this same flag.
   DOCKER_BUILD_DISTROLESS: 'true'
 
+# Keep smoke tests on PRs and manual dispatch only, not nightly in the fork.
 on:
-  schedule:
-    - cron: '0 3 * * *' # 3:00 AM UTC, after the nightly Docker build at midnight
   pull_request:
     paths:
       - 'docker/docker-bake.hcl'
